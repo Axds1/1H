@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>الجهاز الهضمي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+  html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100%;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(45deg, #ffb6b9, #ffd3b6, #a7d8f2, #d4a5a5);
+      background-size: 400% 400%;
+      animation: moveLava 10s ease infinite;
+    }
+
+    @keyframes moveLava {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: rgba(255, 250, 232, 0);
+      padding: 1rem;
+      text-align: center;
+      position: top ;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #ffffff;
+    }
+
+    #clock {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+
+    nav {
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      background-color: #ffc3c300;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ff7a7a;
+    }
+
+    main {
+      padding: 2rem;
+      line-height: 2;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    img, video {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem auto;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h4>أهلًا بك في موقع Hmedical 🌟</h4>
+    <div id="clock"></div>
+  </header>
+
+  <nav>
+    <a href="#system">الجهاز الهضمي</a>
+    <a href="#photo">صور</a>
+    <a href="#video">فيديو</a>
+    <a href="#Us">المطورون</a>
+    <a href="Hmedical100.html">العودة</a>
+  </nav>
+
+  <main>
+    <section id="system">
+      <h2>الجهاز الهضمي 💡</h2>
+      <p>
+        الجهاز الهضمي هو الجهاز المسؤول عن تفتيت الطعام وتحويله إلى مواد مغذية يمتصها الجسم  <br> ليستفيد منها في النمو والطاقة وبناء الخلايا، وما لا يحتاجه الجسم يتم إخراجه كفضلات.
+      </p>
+      <p>
+        🌀 <strong>مسار الجهاز الهضمي:</strong><br>
+        <strong>الفم:</strong> تبدأ رحلة الهضم حيث يُمضغ الطعام وتُفرز عليه إنزيمات اللعاب.<br>
+        <strong>البلعوم والمريء:</strong> ينقل الطعام للمعدة عبر حركة التمعج.<br>
+        <strong>المعدة:</strong> تُفرز أحماض وإنزيمات تهضم البروتينات.<br>
+        <strong>الأمعاء الدقيقة:</strong> يتم فيها الهضم النهائي وامتصاص الغذاء.<br>
+        <strong>الأمعاء الغليظة:</strong> امتصاص الماء وتكوين الفضلات.<br>
+        <strong>المستقيم والشرج:</strong> إخراج الفضلات.<br>
+        🧠 <strong>أعضاء مساعدة:</strong> الكبد، المرارة، البنكرياس.
+      </p>
+    </section>
+
+    <section id="photo">
+      <h2>صورة توضيحية 📷</h2>
+      <img src="https://i.imgur.com/MXoXwdH.jpeg" width="700" height="700" alt="صورة للجهاز الهضمي">
+
+    </section>
+
+    <section id="video">
+      <h2>فيديو توضيحي 🎥</h2>
+      <iframe width="700" height="700" src="https://www.youtube.com/embed/shb5wLIDBlI" title="YouTube video player" frameborder="0"></iframe>
+      </video>
+    </section>
+
+    <section>
+      <a href="Hmedical100.html" style="display: inline-block; background-color: #4000ff; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">⬅ العودة</a>
+    </section>
+  </main>
+
+  <footer>
+    <p id="Us">
+      👩‍💻 تم تطوير المشروع بواسطة:<br>
+      حوراء الخليفه<br>
+      حبيبة الله أحمد<br>
+      أزهار شمسان<br>
+      سميرة سالمة<br>
+      لجين حسين
+    </p>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString('ar-EG');
+      document.getElementById('clock').textContent = "الساعة الآن: " + time;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
